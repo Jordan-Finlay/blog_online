@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from personal.models import Question
 
 # Create your views here.
 
 def home_screen(request):
+    
     context = {}
-    context['tester_string'] = 'This is a test to input a string'
+    questions = Question.objects.all()
+    context['questions'] = questions
 
     return render(request, 'personal/home.html', context)

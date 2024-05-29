@@ -9,6 +9,10 @@
 
     {{tester_string}}
 
+    {% for question in questions %}
+        {% include 'personal/snippets/body_snippets.html' with value=question %}
+    {% endfor %}
+    
 </div>
 
 {% endblock content %}
