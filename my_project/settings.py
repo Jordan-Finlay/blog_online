@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'personal',
     'about',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +71,9 @@ TEMPLATES = [
         },
     },
 ]
+
+
+AUTH_USER_MODEL = 'account.Account'
 
 WSGI_APPLICATION = 'my_project.wsgi.application'
 
