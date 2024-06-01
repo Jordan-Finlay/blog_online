@@ -1,12 +1,12 @@
 from django.shortcuts import render
+from account.models import Account
 from django.http import HttpResponse
-from personal.models import Question
 
-# Create your views here.
 
 def home_screen(request): 
     context = {}
-    questions = Question.objects.all()
-    context['questions'] = questions
+
+    accounts = Account.objects.all()
+    context['accounts'] = accounts
 
     return render(request, 'personal/home.html', context)
