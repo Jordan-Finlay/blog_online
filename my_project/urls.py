@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path, include
 from about import views as about_views
 from personal.views import home_screen
+from account.views import registration_view
 
 urlpatterns = [
-    path('', home_screen),
+    path('', home_screen, name="home"),
+    path('register/', registration_view, name="register"),
     path('about/', about_views.about_me, name='about'),
     path('admin/', admin.site.urls),
 ]
