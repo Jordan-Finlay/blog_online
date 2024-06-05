@@ -9,14 +9,28 @@
 </head>
 <body>
 
-<header style="border: 10px solid #252525;">This is the main header</header>
+<header>This is the main header
+
+{% if request.user.is_authenticated %}
+    <p> Hello, {{request.user.username}} | <a href="{% url 'logout' %}">logout</a> </p>
+{% else %}
+    <p><a href="{% url 'register' %}">Register</a> | <a href=""></a>Login</p>
+{% endif %}
+<hr>
+
+</header>
 
 
 {% block content %}
+
 {% endblock content %}
 
 
-<footer style="border: 10px solid #252525;">This is the main footer</footer>
+<footer>
+    <hr>
+    <p>This is the main footer</p>
+</footer>
 
 </body>
+
 </html>
