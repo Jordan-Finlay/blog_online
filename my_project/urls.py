@@ -21,6 +21,7 @@ from personal.views import home_screen
 from account.views import ( 
     registration_view,
     logout_view,
+    login_view,
 )
 
 
@@ -28,6 +29,7 @@ urlpatterns = [
     path('', home_screen, name="home"),
     path('register/', registration_view, name="register"),
     path('logout/', logout_view, name="logout"),
+    path('login/', login_view, name="login"),
     path('about/', about_views.about_me, name='about'),
     path('admin/', admin.site.urls),
 ]
