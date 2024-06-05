@@ -28,6 +28,7 @@ class AccountAuthenticationForm(forms.ModelForm):
                 raise forms.ValidationError("Invalid Login")
 
 
+
 class AccountUpdateForm(forms.ModelForm):
 
     class Meta:
@@ -41,7 +42,7 @@ class AccountUpdateForm(forms.ModelForm):
                 account = Account.objects.exclude(pk=self.instance.pk).get(email=email)
             except Account.DoesNotExist:
                 return email
-            raise forms.ValidationError('Email "%s" is already in use.' % account.email)
+            raise forms.ValidationError('Email "%s" is already in use.' % email)
 
     def clean_username(self):
         if self.is_valid():
@@ -50,4 +51,4 @@ class AccountUpdateForm(forms.ModelForm):
                 account = Account.objects.exclude(pk=self.instance.pk).get(username=username)
             except Account.DoesNotExist:
                 return username
-            raise forms.ValidationError('Username "%s" is already in use.' % account.username)
+            raise forms.ValidationError('Username "%s" is already in use.' % username)
