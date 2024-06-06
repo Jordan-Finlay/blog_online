@@ -30,6 +30,10 @@ DEBUG = True
 ALLOWED_HOSTS = ['8000-jordanfinlay-blogonline-ldfvserosbi.ws-eu114.gitpod.io','.herokuapp.com']
 CSRF_TRUSTED_ORIGINS = ['https://8000-jordanfinlay-blogonline-ldfvserosbi.ws-eu114.gitpod.io']
 
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #during development only
+
+
 # Application definition
 
 INSTALLED_APPS = [
