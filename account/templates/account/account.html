@@ -2,25 +2,54 @@
 
 
 {% block content %}
+<style type="text/css">
+    html,
+    body {
+    height: 100%;
+    }
 
-<h2>Account</h2>
-<form method="POST">{% csrf_token %}
+    .form-signin {
+    max-width: 330px;
+    padding: 1rem;
+    }
+
+    .form-signin .form-floating:focus-within {
+    z-index: 2;
+    }
+
+    .form-signin input[type="email"] {
+    margin-bottom: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    }
+
+    .form-signin input[type="username"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    }
+
+</style>
+
+<form class="form-signin w-100 m-auto" method='POST'>{% csrf_token %}>
+    <h1 class="h3 mb-3 fw-normal">Account</h1>
+  
+    <div class="form-floating">
+        <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="{{account_form.initial.email}}">
+        <label for="floatingInput">Email address</label>
+    </div>
+
+    <div class="form-floating">
+        <input type="text" name="username" class="form-control" id="inputUsername" id="floatingPassword" placeholder="Username" value="{{account_form.initial.username}}">
+        <label for="floatingPassword">Password</label>
+    </div>
+
     {% for field in account_form %}
         <p>
-            {{field.label_tag}}
-            {{field}}
-
-            {% if field.help_text %}
-                <small style="color: gray;">{{field.help_text}}</small>
-            {% endif %}
+            {% for error in field.errors %}
+                <p style="color: red;">{{ error }}</p>
+            {% endfor %}
         </p>
-
-    {% endfor %}
-
-    {% for field in login_form %}
-        {% for error in field.errors %}
-            <p style="color: red;">{{error}}</p>
-        {% endfor %}
     {% endfor %}
 
     {% if account_form.non_field_errors %}
@@ -28,9 +57,13 @@
             <p>{{account_form.non_field_errors}}</p>
         </div>
     {% endif %}
-    <button type="submit">Save changes</button>
-</form>
 
+    {% if success_message %}
+        <p style="color: green;"; text-align: center;>{{ success_message }}</p>
+    {% endif %}
 
-{% endblock content %}
-
+      <button class="btn btn-primary w-100 py-2" type="submit">Save changes</button>
+    
+    </form>
+    
+    {% endblock content %}
