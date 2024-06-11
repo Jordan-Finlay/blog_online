@@ -2,18 +2,72 @@
 
 
 {% block content %}
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Blog online</h1>
-    <p class="lead">A blog page for all users! Sign up/register then post away.</p>
+<style type="text/css">
+    @media (max-width: 768px) {
+        .right-column{
+            margin-left: 0px;
+        }
+    }
+    @media (min-width: 768px) {
+        .right-column{
+            margin-left: 20px;
+        }
+    }
+    .blog-post-container{
+        background-color: #ffff;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .create-post-bar{
+        background-color: #ffff;
+        margin-bottom: 20px;
+    }
+    .left-column{
+        padding: 0px;
+    }
+    .right-column{
+        padding: 0px;
+    }
+</style>
 
-</div>
+<div class="container mt-3">
+    <div class="row">
+       
+        <!-- Right side 'create post' BAR -->
+        <div class="create-post-bar d-lg-none col-lg-7 offset-lg-1">
+            <a href="{% url 'blog:create' %}">Create post</a>
+        </div>
+       <!-- End Right side 'create post' BAR -->
 
-<div class="container">
-    <div class="d-flex flex-column">
-        <h4>Registered users;</h4>
-        {% for account in accounts %}
-            <p>{{account}}</p>
-        {% endfor %}
+        <!--Blog Feed-->
+        <div class="left-column col-lg-7 offset-lg-1">
+            <div class="blog-post-container">
+                <p>This is a tester string here</p>
+            </div>
+            <div class="blog-post-container">
+                <p>This is a tester string here</p>
+            </div>
+            <div class="blog-post-container">
+                <p>This is a tester string here</p>
+            </div>
+            <div class="blog-post-container">
+                <p>This is a tester string here</p>
+            </div>
+        </div>
+        <!--End Blog Feed-->
+
+        <!-- Right side 'create post' COLUMN -->
+         <div class="right-column col-lg-3 d-lg-flex d-none flex-column">
+            <div class="create-post-bar">
+                <p>Tester</p>
+                <p>Tester</p>
+                <p>Tester</p>
+                <p>Tester</p>
+                <a href="{% url 'blog:create' %}">Create post</a>
+            </div>
+         </div>
+        <!-- End Right side 'create post' COLUMN -->
+
     </div>
 </div>
 
