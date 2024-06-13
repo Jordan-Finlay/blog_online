@@ -18,10 +18,16 @@
 
 </style>
 
+<!--Create post function-->
 <div class="container">
 	<div class="row">
 		<div class="col-lg-7 offset-lg-1">
+
 			<form class="create-form" method="post" enctype="multipart/form-data">{% csrf_token %}
+				
+				{% if success_message %}
+					<h3 style="color:green; text-align: center;">{{success_message}}</h3>
+				{% endif %}
 
 				<!-- title -->
 				<div class="form-group">

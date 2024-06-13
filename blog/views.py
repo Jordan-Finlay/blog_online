@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.db.models import Q
+from django.http import HttpResponse
 from blog.models import BlogPost
 from blog.forms import CreateBlogPostForm, UpdateBlogPostForm
 from account.models import Account
@@ -22,6 +23,7 @@ def create_blog_view(request):
         author = Account.objects.filter(email=user.email).first()
         obj.author = author
         obj.save()
+        context['success_message'] = "Posted successfully"
         form = CreateBlogPostForm()
 
     context['form'] = form
