@@ -54,6 +54,10 @@ def edit_blog_view(request, slug):
 
     #Updates and shows a success message
     blog_post = get_object_or_404(BlogPost, slug=slug)
+
+    if blog_post.author != user:
+        return HttpResponse("You are not the author of that post.")
+
     if request.POST:
         form = UpdateBlogPostForm(request.POST or None, request.FILES or None, instance=blog_post)
         if form.is_valid():
