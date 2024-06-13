@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
-
+from django.db.models import Q
 from blog.models import BlogPost
 from blog.forms import CreateBlogPostForm, UpdateBlogPostForm
 from account.models import Account
 
+
+#A function to create a post
 def create_blog_view(request):
 
     context = {}
@@ -27,6 +29,7 @@ def create_blog_view(request):
     return render(request, "blog/create_blog.html", context)
 
 
+#A function to see users posts
 def detail_blog_view(request, slug):
 
     context = {}
@@ -37,6 +40,7 @@ def detail_blog_view(request, slug):
     return render(request, 'blog/detail_blog.html', context)
 
 
+#An edit post function(if the post belongs to user)
 def edit_blog_view(request, slug):
 
     context = {}
@@ -56,6 +60,7 @@ def edit_blog_view(request, slug):
             context['success_message'] = "Updated"
             blog_post = obj
 
+    #The user can only update title/body or images
     form = UpdateBlogPostForm(
         initial = {
             "title": blog_post.title,
@@ -66,3 +71,20 @@ def edit_blog_view(request, slug):
 
     context['form'] = form
     return render(request, 'blog/edit_blog.html', context)
+
+
+#A search bar function finding set then converting into a list
+def get_blog_queryset(query=None):
+    queryset = []
+    queries = query.split(" ")
+    for q in queries:
+        #Searches posts and finds only unique
+        posts = BlogPost.objects.filter(
+            Q(title__icontains=q) |
+            Q(body__icontains=q)
+        ).distinct()
+
+        for post in posts:
+            queryset.append(post)
+    
+    return list(set(queryset))
