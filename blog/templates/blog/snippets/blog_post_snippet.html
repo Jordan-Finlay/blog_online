@@ -8,9 +8,11 @@
 	}
 </style>
 
+<!--Checks if the search found a post otherwise shows nothing-->
 {% if blog_post %}
 <div class="container">
 	<div class="row">
+		
 		<!-- Blog Post -->
 		<div class="card m-auto">
             <!--Shows blog posts on feed also allows updates-->
@@ -35,6 +37,7 @@
 
 {% else %}
 
+<!--If there are no results found - displays this message-->
 <div class="container">
 	<div class="row">
 		<div class="card m-auto">
