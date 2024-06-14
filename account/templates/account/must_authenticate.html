@@ -3,13 +3,18 @@
 {% block content %}
 
 <style type="text/css">
+    @media (max-width: 768px) {
+		#pdss {
+			padding-top: 200px;
+		}
+	}
     .pushdown {
 		padding-top: 120px;
 	}
 
 </style>
 <!--A small window page if the user isn't authenticated it'll ask them to do so-->
-<div class="container pushdown">
+<div class="container pushdown" id="pdss">
     <div class="d-flex flex-column">
         <p class="m-auto">Must authenticate to view this page</p>
         <p class="m-auto">
