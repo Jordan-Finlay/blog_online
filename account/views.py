@@ -3,9 +3,11 @@ from django.contrib.auth import login, authenticate, logout
 from account.forms import RegistrationForm, AccountAuthenticationForm, AccountUpdateForm
 from blog.models import BlogPost
 
+#Display of registration_view
 def registration_view(request):
     context = {}
     if request.POST:
+        #A form for registering checking email and password
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
@@ -21,20 +23,20 @@ def registration_view(request):
         context['registration_form'] = form
     return render(request, 'account/register.html', context)
 
+#Display of logout
 def logout_view(request):
     logout(request)
     return redirect('home')
 
-
-
+#Display of login
 def login_view(request):
 
     context = {}
-
+    #A check if user is authenticated and sends them to home if not
     user = request.user
     if user.is_authenticated:
         return redirect("home")
-
+    #A post request for email and password
     if request.POST:
         form = AccountAuthenticationForm(request.POST)
         if form.is_valid():
@@ -48,14 +50,14 @@ def login_view(request):
 
     else:
         form = AccountAuthenticationForm()
-
+    #Returns account form
     context['login_form'] = form
     return render(request, 'account/login.html', context)
 
 
 
 def account_view(request):
-
+    #Depending if user is currently logged in they can change account details
     if not request.user.is_authenticated:
         return redirect('login')
 
@@ -68,6 +70,7 @@ def account_view(request):
                 "email": request.POST['email'],
                 "username": request.POST['username'],
             }
+            #Updates with success message and saves form
             form.save()
             context['success_message'] = "Updated!"
     else:

@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate
 from account.models import Account
 
+#Sign up/registration form
 class RegistrationForm(UserCreationForm):
     email = forms.EmailField(max_length=60, help_text='Required. Add a valid email address')
 
@@ -11,7 +12,7 @@ class RegistrationForm(UserCreationForm):
         fields = ("email", "username", "password1", "password2")
 
 
-
+#Authentication
 class AccountAuthenticationForm(forms.ModelForm):
 
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
@@ -28,7 +29,7 @@ class AccountAuthenticationForm(forms.ModelForm):
                 raise forms.ValidationError("Invalid Login")
 
 
-
+#General update account
 class AccountUpdateForm(forms.ModelForm):
 
     class Meta:
