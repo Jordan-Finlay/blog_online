@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate
+from django.core.exceptions import ObjectDoesNotExist
 from account.models import Account
 
 #Sign up/registration form
@@ -43,7 +44,7 @@ class AccountUpdateForm(forms.ModelForm):
             email = self.cleaned_data['email']
             try:
                 account = Account.objects.exclude(pk=self.instance.pk).get(email=email)
-            except Account.DoesNotExist:
+            except ObjectDoesNotExist:
                 return email
             raise forms.ValidationError('Email "%s" is already in use.' % email)
 
@@ -53,6 +54,6 @@ class AccountUpdateForm(forms.ModelForm):
             username = self.cleaned_data['username']
             try:
                 account = Account.objects.exclude(pk=self.instance.pk).get(username=username)
-            except Account.DoesNotExist:
+            except ObjectDoesNotExist:
                 return username
             raise forms.ValidationError('Username "%s" is already in use.' % username)
