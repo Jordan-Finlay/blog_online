@@ -47,19 +47,23 @@
 	.pushdown {
 		padding-top: 130px;
 	}
-	.test{
+	.spacing{
 		margin: 20px 10px 10px 20px;
+	}
+	.rightcolstick {
+		position: fixed;
 	}
 
 </style>
 
 
-<!-- main content -->
+<!-- Main content -->
+ <!--Main title only shows when the screen is large then sets to hidden-->
 <div class="container pushdown">
 	<div class="row">
 		<div id="hide">
 			<div class="card movetitle">
-				<div class="test">
+				<div class="spacing">
 					<h1>Blog Online!</h1>
 					<p>This is a page I created to allow any and all users to register and post blogs with images.</p>
 					<p>Sign up and post away!</p>
@@ -115,15 +119,15 @@
 
 
 		<!-- Right 'create post' column  (this bar only shows when screen size is large)-->
+		 
 		<div class="right-column col-lg-3 d-lg-flex d-none flex-column">
-
-			<div class="card create-post-bar d-flex flex-column p-3">
+			<div class="card create-post-bar d-flex flex-column p-3 ">
 				<img class="img-fluid d-block m-auto pb-2" src="{% static 'bird.jpg' %}" width="150" height="150">
 				<p class="lead">Side bar for creating posts</p>
 				<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Create post</a></p>
 			</div>
-		
 		</div>
+		
 		<!-- end Right 'create post' column  -->
 
 

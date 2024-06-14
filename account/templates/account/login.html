@@ -32,10 +32,13 @@
     .h3 {
         text-align: center;
     }
+    .pushdown {
+		padding-top: 120px;
+	}
 
 </style>
 
-<form class="form-signin w-100 m-auto" method='POST'>{% csrf_token %}
+<form class="form-signin w-100 m-auto pushdown" method='POST'>{% csrf_token %}
     <div class="d-flex flex-column pb-3">
         <img class="img-fluid mx-auto d-block" src="{% static 'penguin.jpeg' %}" alt="Picture of penguin" width="70" height="70">
     </div>

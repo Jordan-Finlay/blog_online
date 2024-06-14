@@ -37,10 +37,12 @@
         width: 100%;
         margin: auto;
     }
+    .pushdown {
+		padding-top: 100px;
+	}
 
 </style>
-
-<form class="form-signin w-100 m-auto" method='POST'>{% csrf_token %}>
+<form class="form-signin w-100 m-auto pushdown" method='POST'>{% csrf_token %}
     <h1 class="h3 mb-3 fw-normal">Account</h1><!--Account change-->
     <!--Email to change-->
     <input type="email" name="email" class="form-control" placeholder="name@example.com" value="{{account_form.initial.email}}">
@@ -65,9 +67,9 @@
         <p style="color: green;"; text-align: center;>{{ success_message }}</p>
     {% endif %}
 
-      <button class="btn btn-primary w-100 py-2" type="submit">Save changes</button>
+    <button class="btn btn-primary w-100 py-2" type="submit">Save changes</button>
     
-    </form>
+</form>
 
 
     <div class="d-flex flex-column">
@@ -94,5 +96,4 @@
         </div>
     </div>
 
-    
     {% endblock content %}
