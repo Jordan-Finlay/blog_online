@@ -63,6 +63,7 @@ def account_view(request):
 
     context = {}
 
+    #Checks form and user is correct
     if request.POST:
         form = AccountUpdateForm(request.POST, instance=request.user)
         if form.is_valid():

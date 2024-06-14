@@ -30,7 +30,7 @@ class BlogPost(models.Model):
 def submission_delete(sender, instance, **kwargs):
     instance.image.delete(False)
 
-#pre save 
+#pre save before the user saves
 def pre_save_blog_post_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
         instance.slug = slugify(instance.author.username + "-" + instance.title)

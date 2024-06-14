@@ -38,17 +38,18 @@
 
 </style>
 
+<!--Login page-->
 <form class="form-signin w-100 m-auto pushdown" method='POST'>{% csrf_token %}
     <div class="d-flex flex-column pb-3">
         <img class="img-fluid mx-auto d-block" src="{% static 'penguin.jpeg' %}" alt="Picture of penguin" width="70" height="70">
     </div>
     <h1 class="h3 mb-3 fw-normal">Please log in</h1>
-  
+  <!--Checks email is correct-->
     <div class="form-floating">
         <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
         <label for="floatingInput">Email address</label>
     </div>
-
+<!--Checks password is correct-->
     <div class="form-floating">
         <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" required>
         <label for="floatingPassword">Password</label>
@@ -57,18 +58,19 @@
     {% for field in login_form %}
         <p>
             {% for error in field.errors %}
-                <p style="color: red;">{{ error }}</p>
+                <p style="color: red;">{{ error }}</p><!--Error checks-->
             {% endfor %}
         </p>
     {% endfor %}
 
     {% if login_form.non_field_errors %}
         <div style="color: red;">
-            <p>{{login_form.non_field_errors}}</p>
+            <p>{{login_form.non_field_errors}}</p><!--Error checks-->
         </div>
     {% endif %}
 
     <div class="form-check text-start my-3">
+        <!--Remember me function so the user doesnt have to retype everytime they use the website-->
         <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
         <label class="form-check-label" for="flexCheckDefault">
           Remember me
@@ -79,7 +81,7 @@
     
     </form>
 
-
+    <!--Url to take the user to the reset password-->
     <div class="d-flex flex-column">
         <a class="m-auto" href="{% url 'password_reset' %}">Reset password</a>
     </div>

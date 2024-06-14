@@ -10,7 +10,7 @@
             </li>
         {% endif %}
             
-        <!--A loop for multiple pages-->
+        <!--A loop for multiple pages to be displayed-->
         {% for i in blog_posts.paginator.page_range %}
             {% if blog_posts.number == i %}
                 <li class="page-item active"><a class="page-link">{{ i }}</a></li>

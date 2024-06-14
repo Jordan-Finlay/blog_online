@@ -9,6 +9,7 @@ class RegistrationForm(UserCreationForm):
 
     class Meta:
         model = Account
+        #Checks password one and password two are identical
         fields = ("email", "username", "password1", "password2")
 
 
@@ -16,7 +17,7 @@ class RegistrationForm(UserCreationForm):
 class AccountAuthenticationForm(forms.ModelForm):
 
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
-
+    #Checks email and password are correct
     class Meta:
         model = Account
         fields = ('email', 'password')
@@ -29,13 +30,14 @@ class AccountAuthenticationForm(forms.ModelForm):
                 raise forms.ValidationError("Invalid Login")
 
 
-#General update account
+#Update account
 class AccountUpdateForm(forms.ModelForm):
 
     class Meta:
         model = Account
         fields = ('email', 'username')
 
+    #Checks the email isn't already used on the data base (no duplicates)
     def clean_email(self):
         if self.is_valid():
             email = self.cleaned_data['email']
@@ -45,6 +47,7 @@ class AccountUpdateForm(forms.ModelForm):
                 return email
             raise forms.ValidationError('Email "%s" is already in use.' % email)
 
+    #Checks the username isn't already used on the data base (no duplicates)
     def clean_username(self):
         if self.is_valid():
             username = self.cleaned_data['username']

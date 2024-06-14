@@ -18,7 +18,7 @@ class MyAccountManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    
+    #Create superuser (for myself)
     def create_superuser(self, email, username, password):
         user = self.create_user(
                 email=self.normalize_email(email),
@@ -32,7 +32,7 @@ class MyAccountManager(BaseUserManager):
         return user
 
 
-
+#All options I can use to change/upgrade users accounts
 class Account(AbstractBaseUser):
     email           = models.EmailField(verbose_name="email", max_length=60, unique=True)
     username        = models.CharField(max_length=30, unique=True)
