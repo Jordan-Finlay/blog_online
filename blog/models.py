@@ -11,6 +11,7 @@ def upload_location(instance, filename, **kwargs):
     )
     return file_path
 
+#General varibles for blog
 class BlogPost(models.Model):
     title               = models.CharField(max_length=50, null=False, blank=False)
     body                = models.TextField(max_length=5000, null=False, blank=False)
@@ -22,6 +23,7 @@ class BlogPost(models.Model):
 
     def __str__(self):
         return self.title
+
 
 #Deletes image if blogpost is deleted
 @receiver(post_delete, sender=BlogPost)

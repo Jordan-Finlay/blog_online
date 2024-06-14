@@ -21,7 +21,7 @@
         background-color: white;
     }
     .search-bar{
-        max-width: 350px;
+        max-width: 240px;
         width: 100%;
         margin-left: 40px;
         border: 1px solid rgb(69, 188, 235);
@@ -29,11 +29,16 @@
     form {
         width: 100%;
     }
+    .navbarstick {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
 
 </style>
 
 <!--Header-->
-<div class="bigcontainer background">
+<div class="bigcontainer background navbarstick">
     <div class="container py-3">
         <div class="d-flex flex-column flex-md-row align-items-center pb-3">
             <h5 class="my-0 mr-md-auto font-weight-normal">

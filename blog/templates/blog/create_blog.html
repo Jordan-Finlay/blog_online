@@ -25,6 +25,7 @@
 
 			<form class="create-form" method="post" enctype="multipart/form-data">{% csrf_token %}
 				
+				<!--Success message when posted-->
 				{% if success_message %}
 					<h3 style="color:green; text-align: center;">{{success_message}}</h3>
 				{% endif %}
