@@ -154,7 +154,7 @@ Password '1' and '2' MUST be the same;
 
 # Features Left to Implement
 
-## __extra features i'd like to add__
+## extra features i'd like to add
 I have a few ideas I would love to add to this project such as:
 
 	- A like button on posts
@@ -203,7 +203,7 @@ All checks are passed and it's running smoothly
 
 # Bugs
 
-## __Small bugs__
+## Small bugs
 - I've been lucky and not encountered many bugs whilst making this project.
 The main bug I've encountered is images not loading correctly while debug is set to True.
 I believe it to be happening because my images are being stored onto my ide and not online.
@@ -233,7 +233,7 @@ The live link can be found here - <https://github.com/Jordan-Finlay/blog_online>
 
 # Credits
 
-## __Extra credits__
+## Extra credits
 - I used google for some images and pixabay for a few others - https://pixabay.com/images/search/logo/ 
 Other than that, I've not used any third parties for any logos/design/pictures etc
 
