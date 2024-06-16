@@ -1,39 +1,212 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome,
+<div align="center"><img src="assets/readme/homescreen.jpg" alt="A picture of blog_online homepage"></div>
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+# UX
+I've created a website called 'Blog online".
+This is a reddit style website where users can sign up and post/blog.
+You can create a title, body(description) and upload images.
+You can update any images you have personally uploaded (you cannot change other users posts).
 
-## Codeanywhere Reminders
+There are a lot of validation checks. Mainly when creating accounts or changing account settings.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+<div align="center"><img src="assets/readme/validlogin.jpg" alt="An image of login in error"></div>
 
-`python3 -m http.server`
+<div align="center"><img src="assets/readme/errorcheck.jpg" alt="An image of error checking"></div>
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+<br />
 
-`http_server`
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# Features
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+__Existing Features__
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- A fully functioning frontend that includes;
+	Whilst logged in;
+	- Home page
+	- Account (settings)
+	- Logout
 
-To log into the Heroku toolbelt CLI:
+	Whilst logged out;
+	- Home page
+	- Login
+	- Register
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## __While logged in__
 
----
+When logged in you can post blogs with a title, description and an image.
+You can further update your post (with success messages).
+You can change your account settings such as;
+- email
+- username
+- password
 
-Happy coding!
+<div align="center"><img src="assets/readme/loggedin.jpg" alt="An image showing navbar while logged in"></div>
+
+
+__Create post__
+
+There are two ways to create a post (depending on screen size).
+There is only ever 1 way to post at any time.
+You can create a post/blog with a title, description and an image;
+
+<div align="center"><img src="assets/readme/createpost.jpg" alt="An image showing create post"></div>
+
+
+__Change password__
+
+You can update your email, and change password in accounts menu;
+
+<div align="center"><img src="assets/readme/account.jpg" alt="An image showing change password"></div>
+
+
+__Users posts__
+
+You can view all your uploaded posts as a list on accounts. You can enter the posts and it will lead to 'update' function too.
+Currently you can only view your personal uploads this way. But when and if I create it further to add friends I will add a function to enable users to see friends posts in a similar fashion.
+
+<div align="center"><img src="assets/readme/blogposts.jpg" alt="An image showing all users posts"></div>
+
+
+
+
+## __While logged out__
+
+While logged out my website is mainly made to push people to register and log in.
+There is an authentication check before trying to post or changing account settings.
+You can register/sign up while logged out or alternatively you can login if you've created an account.
+You can still always see other users posts.
+
+<div align="center"><img src="assets/readme/loggedout.jpg" alt="An image showing navbar while logged out"></div>
+
+
+__Reset password__
+
+You can reset your password if forgotten. When logged out there is a reset password by login 
+(currently sends it into my terminal and not directly through email).
+
+<div align="center"><img src="assets/readme/resetpass.jpg" alt="An image showing reset password"></div>
+
+
+###__While logged in or out__
+
+
+__Search bar__
+
+There is a fully functioning search bar at the top of the page. I've set it's position to fixed so it will follow the user as they scroll.
+You can search for any image that's been posted and will recieve a 'nothing found' message if there is no posts that match the search.
+
+<div align="center"><img src="assets/readme/searchbar.jpg" alt="An image showing searchbar"></div>
+<br />
+<div align="center"><img src="assets/readme/noresults.jpg" alt="An image showing searched no results"></div>
+
+
+__Pagination__
+
+At the bottom of the page I've implemented a Pagination system and set it currently to 3 images per page.
+When you hit the bottom of the page you can jump one or more pages at a time or completely jump to the last page.
+If there was hundreds/thousands of posts I would increase that number, but for now as a test I thought 3 was fine.
+
+<div align="center"><img src="assets/readme/pagi.jpg" alt="An image showing pagination"></div>
+
+
+__Validation checks__
+
+The validation checks are when logging in to check credentials are correct.
+Also when registering an account to check other users don't have the same name
+lastly when registering an account to check the password isn't too weak.
+
+<div align="center"><img src="assets/readme/registercheck.jpg" alt="An image showing register check (no duplication emails etc)"></div>
+
+<br />
+
+Theres also a password check. When you change your password it will ensure you repeat your new password twice (otherwise it will not work).
+Password '1' and '2' MUST be the same;
+
+<div align="center"><img src="assets/readme/passwordcheck.jpg" alt="An image showing password 1 and 2 are the same"></div>
+
+
+# Features Left to Implement
+
+I have a few ideas I would love to add to this project such as:
+
+	- A like button on posts
+	- A comments section on posts 
+	- A friends list/add friends
+
+Following closely to friends list (also mentioned above) I would push the ability to be able to see all of your friends posts in a list such as you can your own.
+
+I think these features would add a great touch to the website making it a lot more interactive for users and would bring more to the blog website.
+
+
+# Testing
+
+I've tested blog online on multiple browers such as Firefox/Chrome and Microsoft edge. As well as my android phone using "Samsung internet".
+To my current knowledge there are no bugs on any device or internet browser - although I'm still yet to test fully on an ipad/tablet.
+The website is fully adaptable to all devices and screen sizes.
+
+- Firefox
+  - Script works as intended
+
+- Chrome
+  - Script works as intended
+
+- Microsoft edge
+  - Script works as intended
+
+## Mobile testing
+
+- Firefox (mobile)
+  - Script works as intended
+
+- Chrome (mobile)
+  - Script works as intended
+
+- Microsoft edge (mobile)
+  - Script works as intended
+
+
+# Validator Testing
+
+All checks are passed and it's running smoothly
+
+<div align="center"><img src="assets/readme/#" alt=""></div>
+
+
+# Bugs
+I've been lucky and not encountered many bugs whilst making this project.
+The main bug I've encountered is images not loading correctly while debug is set to True.
+I believe it to be happening because my images are being stored onto my ide and not online.
+Further tests will need to pursue before potentially running in production mode.
+
+
+<div align="center"><img src="assets/readme/pictureerror.jpg" alt="An error of pictures/uploads not working correctly"></div>
+
+
+# Deployment
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+  - In the GitHub repository, navigate to the Settings tab
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found here - <https://github.com/Jordan-Finlay/blog_online>
+
+
+## Local deployment
+
+- I've downloaded a copy of my wedding checker script onto my computer and am able to access it through local deployment to change and mess around with the overall code and layout/structure for better user experience. I've also installed python that allows me to work on my code as if it was running through code anywhere.
+
+
+<div align="center"><img src="assets/readme/local.jpg" alt="An error of pictures of local development on my pc"></div>
+
+
+# Credits
+
+__Content__
+
+- I used google for some images and pixabay for a few others - https://pixabay.com/images/search/logo/
+- Other than that, I've not used any third parties for any logos/design/pictures etc
+
