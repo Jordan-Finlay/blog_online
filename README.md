@@ -38,6 +38,8 @@ A fully functioning frontend that includes;
 	- Login
 	- Register
 
+<br />
+
 
 ## __While logged in__
 
