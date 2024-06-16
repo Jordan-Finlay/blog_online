@@ -64,7 +64,7 @@ You can create a post/blog with a title, description and an image;
 
 __Edit post__
 
-You can edit any post YOU have created and no other users;
+You can edit any post YOU have created and not other users;
 
 <div align="center"><img src="assets/readme/updateblog.jpg" alt="An image showing how to update blog"></div>
 
@@ -72,7 +72,7 @@ You can edit any post YOU have created and no other users;
 
 __Change password__
 
-You can update your email, and change password in accounts menu;
+You can update your email, username and change password in accounts menu;
 
 <div align="center"><img src="assets/readme/account.jpg" alt="An image showing change password"></div>
 
@@ -168,7 +168,7 @@ I think these features would add a great touch to the website making it a lot mo
 
 # Testing
 
-I've tested blog online on multiple browers such as Firefox/Chrome and Microsoft edge. As well as my android phone using "Samsung internet".
+- I've tested blog online on multiple browers such as Firefox/Chrome and Microsoft edge. As well as my android phone using "Samsung internet".
 To my current knowledge there are no bugs on any device or internet browser - although I'm still yet to test fully on an ipad/tablet.
 The website is fully adaptable to all devices and screen sizes.
 
@@ -201,7 +201,7 @@ All checks are passed and it's running smoothly
 
 
 # Bugs
-I've been lucky and not encountered many bugs whilst making this project.
+- I've been lucky and not encountered many bugs whilst making this project.
 The main bug I've encountered is images not loading correctly while debug is set to True.
 I believe it to be happening because my images are being stored onto my ide and not online.
 Further tests will need to pursue before potentially running in production mode.
@@ -230,8 +230,6 @@ The live link can be found here - <https://github.com/Jordan-Finlay/blog_online>
 
 # Credits
 
-__Content__
-
-- I used google for some images and pixabay for a few others - https://pixabay.com/images/search/logo/
-- Other than that, I've not used any third parties for any logos/design/pictures etc
+- I used google for some images and pixabay for a few others - https://pixabay.com/images/search/logo/ 
+Other than that, I've not used any third parties for any logos/design/pictures etc
 
