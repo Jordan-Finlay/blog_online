@@ -8,11 +8,16 @@ This is a reddit style website where users can sign up and post/blog.
 You can create a title, body(description) and upload images.
 You can update any images you have personally uploaded (you cannot change other users posts).
 
+Anyone can create an account for free and easily with the register button and immidately start posting;
+
+<div align="center"><img src="assets/readme/registeraccount.jpg" alt="An image of register account menu"></div>
+
+<br />
+
 There are a lot of validation checks. Mainly when creating accounts or changing account settings.
+So when you register an account if a different user has the same name or is using that specific email you wont be able to use it also.
 
-<div align="center"><img src="assets/readme/validlogin.jpg" alt="An image of login in error"></div>
-
-<div align="center"><img src="assets/readme/errorcheck.jpg" alt="An image of error checking"></div>
+<div align="center"><img src="assets/readme/registercheck.jpg" alt="An image showing register check (no duplication emails etc)"></div>
 
 
 <br />
@@ -90,7 +95,7 @@ You can reset your password if forgotten. When logged out there is a reset passw
 <div align="center"><img src="assets/readme/resetpass.jpg" alt="An image showing reset password"></div>
 
 
-###__While logged in or out__
+### __While logged in or out__
 
 
 __Search bar__
@@ -118,7 +123,10 @@ The validation checks are when logging in to check credentials are correct.
 Also when registering an account to check other users don't have the same name
 lastly when registering an account to check the password isn't too weak.
 
-<div align="center"><img src="assets/readme/registercheck.jpg" alt="An image showing register check (no duplication emails etc)"></div>
+<div align="center"><img src="assets/readme/validlogin.jpg" alt="An image of login in error"></div>
+
+<div align="center"><img src="assets/readme/errorcheck.jpg" alt="An image of error checking"></div>
+
 
 <br />
 
