@@ -3,12 +3,12 @@
 
 
 # UX
-I've created a website called 'Blog online".
+I've created a website called 'Blog Online".
 This is a reddit style website where users can sign up and post/blog.
 You can create a title, body(description) and upload images.
 You can update any images you have personally uploaded (you cannot change other users posts).
 
-Anyone can create an account for free and easily with the register button and immidately start posting;
+Anyone can create an account for free and easily with the register button and immediately start posting;
 
 <div align="center"><img src="assets/readme/registeraccount.jpg" alt="An image of register account menu"></div>
 
@@ -28,12 +28,12 @@ So when you register an account if a different user has the same name or is usin
 __Existing Features__
 
 A fully functioning frontend that includes;
-- Whilst logged in;
+- Whilst logged in:
 	- Home page
 	- Account (settings)
 	- Logout
 
-- Whilst logged out;
+- Whilst logged out:
 	- Home page
 	- Login
 	- Register
@@ -46,7 +46,7 @@ A fully functioning frontend that includes;
 When logged in you can post/blog with a title, description and an image.
 You can further update your post (with success messages).
 You can change your account settings such as change email/username or password.
-Everything is in the top right nav bar;
+Everything is in the top right nav bar:
 
 
 <div align="center"><img src="assets/readme/loggedin.jpg" alt="An image showing navbar while logged in"></div>
@@ -56,7 +56,7 @@ __Create post__
 
 There are two ways to create a post (depending on screen size).
 There is only ever 1 way to post at any time.
-You can create a post/blog with a title, description and an image;
+You can create a post/blog with a title, description and an image:
 
 <div align="center"><img src="assets/readme/createpost.jpg" alt="An image showing create post"></div>
 
@@ -64,7 +64,7 @@ You can create a post/blog with a title, description and an image;
 
 __Edit post__
 
-You can edit any post YOU have created and not other users;
+You can edit any post YOU have created and not other users:
 
 <div align="center"><img src="assets/readme/updateblog.jpg" alt="An image showing how to update blog"></div>
 
@@ -72,7 +72,7 @@ You can edit any post YOU have created and not other users;
 
 __Change password__
 
-You can update your email, username and change password in accounts menu;
+You can update your email, username and change password in accounts menu:
 
 <div align="center"><img src="assets/readme/account.jpg" alt="An image showing change password"></div>
 
@@ -134,8 +134,8 @@ If there was hundreds/thousands of posts I would increase that number, but for n
 
 __Validation checks__
 
-The validation checks are when logging in to check credentials are correct.
-Also when registering an account to check other users don't have the same name
+The validation checks are used when logging in to check credentials are correct.
+Also when registering an account to check other users don't have the same name, 
 lastly when registering an account to check the password isn't too weak.
 
 <div align="center"><img src="assets/readme/validlogin.jpg" alt="An image of login in error"></div>
@@ -145,7 +145,7 @@ lastly when registering an account to check the password isn't too weak.
 
 <br />
 
-Theres also a password check. When you change your password it will ensure you repeat your new password twice (otherwise it will not work).
+There's also a password check. When you change your password it will ensure you repeat your new password twice (otherwise it will not work).
 Password '1' and '2' MUST be the same;
 
 <div align="center"><img src="assets/readme/passwordcheck.jpg" alt="An image showing password 1 and 2 are the same"></div>
@@ -161,7 +161,7 @@ I have a few ideas I would love to add to this project such as:
 	- A comments section on posts 
 	- A friends list/add friends
 
-Following closely to friends list (also mentioned above) I would push the ability to be able to see all of your friends posts in a list such as you can your own.
+Following closely to friends list (also mentioned above) I would push the ability to be able to see all of your friends posts in a list in the same way you can see your own. 
 
 I think these features would add a great touch to the website making it a lot more interactive for users and would bring more to the blog website.
 
@@ -229,7 +229,7 @@ The live link can be found here - <https://github.com/Jordan-Finlay/blog_online>
 
 ## Local deployment
 
-- I've downloaded a copy of my wedding checker script onto my computer and am able to access it through local deployment to change and mess around with the overall code and layout/structure for better user experience. I've also installed python that allows me to work on my code as if it was running through code anywhere.
+- I've downloaded a copy of my blog online script onto my computer and am able to access it through local deployment to change and mess around with the overall code and layout/structure for better user experience. 
 
 
 <div align="center"><img src="assets/readme/local.jpg" alt="An error of pictures of local development on my pc"></div>
