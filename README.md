@@ -27,13 +27,13 @@ So when you register an account if a different user has the same name or is usin
 
 __Existing Features__
 
-- A fully functioning frontend that includes;
-	Whilst logged in;
+A fully functioning frontend that includes;
+- Whilst logged in;
 	- Home page
 	- Account (settings)
 	- Logout
 
-	Whilst logged out;
+- Whilst logged out;
 	- Home page
 	- Login
 	- Register
@@ -41,12 +41,11 @@ __Existing Features__
 
 ## __While logged in__
 
-When logged in you can post blogs with a title, description and an image.
+When logged in you can post/blog with a title, description and an image.
 You can further update your post (with success messages).
-You can change your account settings such as;
-- email
-- username
-- password
+You can change your account settings such as change email/username or password.
+Everything is in the top right nav bar;
+
 
 <div align="center"><img src="assets/readme/loggedin.jpg" alt="An image showing navbar while logged in"></div>
 
@@ -58,6 +57,13 @@ There is only ever 1 way to post at any time.
 You can create a post/blog with a title, description and an image;
 
 <div align="center"><img src="assets/readme/createpost.jpg" alt="An image showing create post"></div>
+
+
+__Edit post__
+
+You can edit any post YOU have created and no other users;
+
+<div align="center"><img src="assets/readme/updateblog.jpg" alt="An image showing how to update blog"></div>
 
 
 __Change password__
@@ -95,7 +101,7 @@ You can reset your password if forgotten. When logged out there is a reset passw
 <div align="center"><img src="assets/readme/resetpass.jpg" alt="An image showing reset password"></div>
 
 
-### __While logged in or out__
+## __While logged in or out__
 
 
 __Search bar__
