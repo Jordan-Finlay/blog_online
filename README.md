@@ -154,6 +154,7 @@ Password '1' and '2' MUST be the same;
 
 # Features Left to Implement
 
+## __extra features i'd like to add__
 I have a few ideas I would love to add to this project such as:
 
 	- A like button on posts
@@ -230,6 +231,6 @@ The live link can be found here - <https://github.com/Jordan-Finlay/blog_online>
 
 # Credits
 
-- I used google for some images and pixabay for a few others - https://pixabay.com/images/search/logo/ 
+## - I used google for some images and pixabay for a few others - https://pixabay.com/images/search/logo/ 
 Other than that, I've not used any third parties for any logos/design/pictures etc
 
