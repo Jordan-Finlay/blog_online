@@ -60,6 +60,7 @@ You can create a post/blog with a title, description and an image;
 
 <div align="center"><img src="assets/readme/createpost.jpg" alt="An image showing create post"></div>
 
+<br />
 
 __Edit post__
 
@@ -67,6 +68,7 @@ You can edit any post YOU have created and no other users;
 
 <div align="center"><img src="assets/readme/updateblog.jpg" alt="An image showing how to update blog"></div>
 
+<br />
 
 __Change password__
 
@@ -74,6 +76,7 @@ You can update your email, and change password in accounts menu;
 
 <div align="center"><img src="assets/readme/account.jpg" alt="An image showing change password"></div>
 
+<br />
 
 __Users posts__
 
@@ -82,7 +85,7 @@ Currently you can only view your personal uploads this way. But when and if I cr
 
 <div align="center"><img src="assets/readme/blogposts.jpg" alt="An image showing all users posts"></div>
 
-
+<br />
 
 
 ## __While logged out__
@@ -94,6 +97,7 @@ You can still always see other users posts.
 
 <div align="center"><img src="assets/readme/loggedout.jpg" alt="An image showing navbar while logged out"></div>
 
+<br />
 
 __Reset password__
 
@@ -102,6 +106,7 @@ You can reset your password if forgotten. When logged out there is a reset passw
 
 <div align="center"><img src="assets/readme/resetpass.jpg" alt="An image showing reset password"></div>
 
+<br />
 
 ## __While logged in or out__
 
@@ -115,6 +120,7 @@ You can search for any image that's been posted and will recieve a 'nothing foun
 <br />
 <div align="center"><img src="assets/readme/noresults.jpg" alt="An image showing searched no results"></div>
 
+<br />
 
 __Pagination__
 
@@ -124,6 +130,7 @@ If there was hundreds/thousands of posts I would increase that number, but for n
 
 <div align="center"><img src="assets/readme/pagi.jpg" alt="An image showing pagination"></div>
 
+<br />
 
 __Validation checks__
 
@@ -143,6 +150,7 @@ Password '1' and '2' MUST be the same;
 
 <div align="center"><img src="assets/readme/passwordcheck.jpg" alt="An image showing password 1 and 2 are the same"></div>
 
+<br />
 
 # Features Left to Implement
 
@@ -156,6 +164,7 @@ Following closely to friends list (also mentioned above) I would push the abilit
 
 I think these features would add a great touch to the website making it a lot more interactive for users and would bring more to the blog website.
 
+<br />
 
 # Testing
 
