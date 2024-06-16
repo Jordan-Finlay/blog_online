@@ -193,6 +193,7 @@ The website is fully adaptable to all devices and screen sizes.
 - Microsoft edge (mobile)
   - Script works as intended
 
+<br />
 
 # Validator Testing
 
@@ -200,6 +201,8 @@ All checks are passed and it's running smoothly
 
 <div align="center"><img src="assets/readme/#" alt=""></div>
 
+
+<br />
 
 # Bugs
 
@@ -212,6 +215,7 @@ Further tests will need to pursue before potentially running in production mode.
 
 <div align="center"><img src="assets/readme/pictureerror.jpg" alt="An error of pictures/uploads not working correctly"></div>
 
+<br />
 
 # Deployment
 
@@ -230,6 +234,7 @@ The live link can be found here - <https://github.com/Jordan-Finlay/blog_online>
 
 <div align="center"><img src="assets/readme/local.jpg" alt="An error of pictures of local development on my pc"></div>
 
+<br />
 
 # Credits
 
