@@ -11,8 +11,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import os
-
+import sys
 from pathlib import Path
+import env
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -135,8 +137,8 @@ STATICFILES_DIRS = [
     Path.joinpath(BASE_DIR, 'static'),
     Path.joinpath(BASE_DIR, 'media'),
 ]
-STATIC_URL = '/static/'
-MEDIA_URL ='/media/'
+STATIC_URL = 'static/'
+MEDIA_URL ='media/'
 STATIC_ROOT = Path.joinpath(BASE_DIR, 'static_cdn')
 MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media_cdn')
 
