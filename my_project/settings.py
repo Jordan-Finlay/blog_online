@@ -10,8 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-
+import os
+import sys
 from pathlib import Path
+import env
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9k%$fn(@%jg87s^chr@v*!@g33a1&p95!g3j^65asyv)#!6@=v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = ['8000-jordanfinlay-blogonline-ldfvserosbi.ws-eu114.gitpod.io','.herokuapp.com']
@@ -42,10 +45,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',
     'personal',
     'account',
     'blog',
+
 ]
 
 MIDDLEWARE = [
@@ -129,9 +135,9 @@ USE_TZ = True
 
 STATICFILES_DIRS = [
     Path.joinpath(BASE_DIR, 'static'),
-    Path.joinpath(BASE_DIR, 'media'),
 ]
-STATIC_URL = 'static/'
+
+STATIC_URL = '/static/'
 MEDIA_URL ='/media/'
 STATIC_ROOT = Path.joinpath(BASE_DIR, 'static_cdn')
 MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media_cdn')
@@ -141,3 +147,11 @@ MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media_cdn')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.environ.get('CLOUD_NAME'),
+    'API_KEY': os.environ.get('API_KEY'),
+    'API_SECRET': os.environ.get('API_SECRET')
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
